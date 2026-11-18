@@ -2,36 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Care4Her</title>
-<meta name="description" content="Care4Her gives you one small thing to do for her each day. Private, on your phone only.">
+<meta name="description" content="Care4Her gives you one small thing to do for her each day. Private, on your iPhone only. No account, no tracking.">
+<meta name="theme-color" content="#0a0f22">
 <link rel="icon" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><img src="favicon.svg" alt=""><a href="./">Care4Her</a></header>
+<canvas id="ocean" aria-hidden="true"></canvas>
+<div class="shade" aria-hidden="true"></div>
 
-<h1>One small thing for her.<br><span class="accent">Every day.</span></h1>
-<p class="lede">Something to do, something to say, and something to avoid. Private, on your iPhone only.</p>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="favicon.svg" alt="">Care4Her</a>
+    <nav><a href="#support">Support</a><a href="privacy.html">Privacy</a></nav>
+  </header>
 
-<h2>Support</h2>
-<p>Questions, problems or ideas: <a href="mailto:contact@zeeqai.com">contact@zeeqai.com</a>. We usually reply within two working days.</p>
+  <main>
+    <div class="hero">
+      <div>
+        <h1 class="rise">One small thing for her.<br><span class="brass">Every day.</span></h1>
+        <p class="lede rise d1">Something to do, something to say, and something to avoid. Private, on your iPhone only.</p>
+        <div class="cta rise d2">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6836487883">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.27 1.86-3.36 1.94-3.41-1.06-1.55-2.7-1.76-3.28-1.78-1.4-.14-2.73.82-3.44.82-.71 0-1.8-.8-2.96-.78-1.52.02-2.93.89-3.71 2.25-1.58 2.75-.4 6.81 1.14 9.04.75 1.09 1.65 2.31 2.82 2.27 1.13-.05 1.56-.73 2.93-.73 1.37 0 1.75.73 2.95.71 1.22-.02 1.99-1.11 2.73-2.2.86-1.26 1.21-2.48 1.23-2.55-.03-.01-2.36-.9-2.38-3.58zM14.12 5.93c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.67-1.08 1.74-.95 2.77 1 .08 2.03-.51 2.65-1.27z"/></svg>
+            Get it on the App Store
+          </a>
+          <span class="muted">$2.99, once</span>
+        </div>
+        <p class="fine rise d2">For iPhone · No account · No subscription · Works offline</p>
+      </div>
+      <div class="phone rise d1"><img src="img/01-today.jpg" alt="The Today screen in Care4Her: Day 24 of about 28, and a move with what to do, what to say and what to avoid." width="600" height="1304"></div>
+    </div>
 
-<h2>Common questions</h2>
-<div class="card">
-<p><strong>I forgot my PIN.</strong><br>
-<span class="muted">On the lock screen, tap “Forgot PIN? Start over”. There is no account, so nothing can be recovered. This is what keeps it private.</span></p>
-<p><strong>I got a new iPhone. Where is my data?</strong><br>
-<span class="muted">Care4Her keeps everything on the phone it was set up on, and never in backups or iCloud. On a new phone you start fresh.</span></p>
-<p><strong>Does Care4Her need the internet?</strong><br>
-<span class="muted">No. It works fully offline and sends nothing anywhere.</span></p>
-<p style="margin-bottom:0"><strong>Do I have to enter dates?</strong><br>
-<span class="muted">No. Choose “Use it without dates” during setup, or turn dates off later under More. You'll get everyday moves instead.</span></p>
+    <section>
+      <div class="move">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2>Open it. Read one card. Do the thing.</h2>
+          <p class="muted" style="margin:0 0 32px;max-width:44ch">No feeds, no streaks, no lectures. One move a day, short enough to read in the time it takes to make coffee.</p>
+          <ol class="steps">
+            <li><div><h3>Tell it how she is</h3><p>Tired, low, busy, good. Her word changes the move. It always outranks the app's guess.</p></div></li>
+            <li><div><h3>Swipe for another idea</h3><p>Three to five moves each day. Pick the one that fits you both, and tap “Why this works” to see the research behind it.</p></div></li>
+            <li><div><h3>Do it, then drop it</h3><p>Tap “I did this.” No score, no applause expected.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="card" aria-label="Example of a day's move">
+          <div class="day">
+            <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="none" stroke="rgb(79 179 167 / 0.18)" stroke-width="4"/><circle cx="26" cy="26" r="22" fill="none" stroke="#4fb3a7" stroke-width="4" stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="19.7" transform="rotate(-90 26 26)"/><text x="26" y="31" text-anchor="middle" fill="#eef1fa" font-size="15" font-family="-apple-system, system-ui, sans-serif">24</text></svg>
+            <div><b>Day 24 of about 28</b><span>A guess. Her word outranks it.</span></div>
+          </div>
+          <h3>Lower the bar so she doesn't have to perform okay.</h3>
+          <ul class="lines">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-2a2 2 0 0 0-4 0"/></svg><span><span class="sr">Do: </span>Laundry done. Snacks in. Optional plan gone. Check in once, briefly.</span></li>
+            <li class="say"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L3 21l2-5.8A8.4 8.4 0 1 1 21 11.5z"/></svg><span><q>I took a few things off the day. You don't have to be on.</q></span></li>
+            <li class="avoid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Bloating jokes. Hard talks you can have next week.</span></li>
+          </ul>
+          <div class="why"><span>Why this works · Fair share</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="privacy-grid">
+        <div>
+          <p class="eyebrow">Private by design</p>
+          <h2>Stored only on this iPhone.</h2>
+          <p class="muted" style="margin:0;max-width:46ch">No account, no server, no analytics. We couldn't see what you enter even if we wanted to.</p>
+
+          <p class="group-label">Privacy</p>
+          <div class="group">
+            <div class="row"><span class="label">Unlock with Face ID</span><span class="switch" aria-hidden="true"></span></div>
+            <div class="row"><span class="label">Lock as soon as I leave</span><span class="switch" aria-hidden="true"></span></div>
+            <div class="row"><span class="label">Erase after 10 wrong PINs<small>Optional. Off unless you turn it on.</small></span></div>
+            <div class="row"><span class="label">Plain app icon<small>Swap the icon for a quieter one.</small></span></div>
+          </div>
+          <p class="group-foot">Everything stays on this iPhone, encrypted. No account, no cloud, no backups.</p>
+
+          <p class="group-label">What we never do</p>
+          <div class="group">
+            <div class="row"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span class="label">Ask for her name, or yours</span></div>
+            <div class="row"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span class="label">Track, profile or show ads</span></div>
+            <div class="row"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span class="label">Send anything over the internet</span></div>
+          </div>
+        </div>
+        <div class="phone"><img src="img/04-privacy.jpg" alt="Care4Her Settings: her dates, privacy options, background and a daily reminder." width="600" height="1304" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="narrow">
+        <p class="eyebrow">Support</p>
+        <h2>Common questions</h2>
+        <p class="muted" style="margin:0">Something else? Write to <a href="mailto:contact@zeeqai.com">contact@zeeqai.com</a>. We usually reply within two working days.</p>
+
+        <p class="group-label">Questions</p>
+        <div class="group">
+          <details><summary><span>I forgot my PIN.</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>On the lock screen, tap “Forgot PIN? Start over”. There is no account, so nothing can be recovered. That is what keeps it private.</p></details>
+          <details><summary><span>I got a new iPhone. Where is my data?</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>Care4Her keeps everything on the phone it was set up on, and never in backups or iCloud. On a new phone you start fresh.</p></details>
+          <details><summary><span>Does it need the internet?</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>No. It works fully offline and sends nothing anywhere.</p></details>
+          <details><summary><span>Do I have to enter dates?</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>No. Choose “Use it without dates” during setup, or turn “Keep her dates” off later in Settings, which deletes them. You'll get everyday moves instead.</p></details>
+          <details><summary><span>Can I turn the moving background off?</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>Yes. Settings → Background lets you pick Ocean, Calm ocean, Still or Off. The app also follows your iPhone's Reduce Motion setting.</p></details>
+          <details><summary><span>Is there a subscription?</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></summary><p>No. You pay once on the App Store. No in-app purchases.</p></details>
+        </div>
+
+        <p class="group-label">Not medical advice</p>
+        <div class="note"><b>Care4Her is not a medical tool.</b> Cycles vary. If she has severe pain or anything that worries you both, she should see a clinician.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Zeeq AI Solutions LLC</span><span><a href="privacy.html">Privacy policy</a> · <a href="mailto:contact@zeeqai.com">contact@zeeqai.com</a></span></footer>
 </div>
-
-<h2>Not medical advice</h2>
-<p class="muted">Care4Her is not a medical tool. Cycles vary. If she has severe pain or anything that worries you both, she should see a clinician.</p>
-
-<footer><a href="privacy.html">Privacy policy</a> · © 2026 Zeeq AI Solutions LLC</footer>
+<script src="ocean.js" defer></script>
 </body>
 </html>
